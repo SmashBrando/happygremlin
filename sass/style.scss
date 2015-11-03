@@ -43,8 +43,29 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+@import "susy/susy";
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  container: 1400px
+);
+
+#content, .container {
+	@include container();
+}
+
+#primary {
+	@include span(9 of 12);
+}
+#secondary {
+	@include span(3 of 12);
+}
 
 /*--------------------------------------------------------------
 # Normalize
