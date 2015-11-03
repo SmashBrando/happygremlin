@@ -69,6 +69,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   padding-left: 0.83333%;
   padding-right: 0.83333%; }
 
+.utility-nav {
+  background-color: #fafafa; }
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -317,7 +320,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #ccc;
+  background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
