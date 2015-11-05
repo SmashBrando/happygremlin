@@ -2,11 +2,11 @@
 	@include outer-container(1200px);
 	width: 100%;
 }
-.content-area {
+.content-area, #container {
 	@include span-columns(9);
 }
 
-.widget-area {
+.widget-area, #secondary {
 	@include span-columns(3);
 	@include omega();
 }

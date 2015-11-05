@@ -1,0 +1,121 @@
+.carousel-header {
+    position: relative;
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  h1 {
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+  ul {
+    float: right;
+    margin-top: 10px;
+  }
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    a{
+      color: #fff;
+      text-decoration: none;
+      position:relative;
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      padding: 2px 10px;
+      border-radius: 3px;
+      background: green;
+      &:focus {outline: none;}
+    }
+  }
+  .flex-nav-next {
+    margin-right: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================================================================================================
+ * FONT-FACE
+ * ====================================================================================================================*/
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('fonts/flexslider-icon.eot');
+  src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+.flex-container a:hover,
+.flex-slider a:hover,
+.flex-container a:focus,
+.flex-slider a:focus {
+  outline: none;
+}
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+.flexslider .slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .flexslider .slides {
+  display: block;
+}
+* html .flexslider .slides {
+  height: 1%;
+}
+.no-js .flexslider .slides > li:first-child {
+  display: block;
+}
+
+.flexslider li {
+  margin-right: 10px;
+}

@@ -7,6 +7,7 @@ $widget_custom_id = 'woocar-' . $instance["panels_info"]["id"];
 
 
 <div class="flexslider <?php echo $widget_custom_id; ?>" style="">
+	<div class="carousel-header">
 	<h1>
 		<?php if ( ! empty( $instance['happygremlin_title'] ) ) {
 				echo $args['happygremlin_title'] . apply_filters( 'happygremlin_title', $instance['happygremlin_title'] ). $args['happygremlin_title'];
@@ -14,6 +15,7 @@ $widget_custom_id = 'woocar-' . $instance["panels_info"]["id"];
 		?>
 	</h1>
 	<div class="arrows"></div>
+	</div>
 	<ul class="slides">
 		<?php
 			$this_meta_key = $instance['happygremlin_product_feed'];
@@ -56,13 +58,15 @@ $widget_custom_id = 'woocar-' . $instance["panels_info"]["id"];
 		 
 		  $window.load(function() {
 		  	var wid = ".<?php echo $widget_custom_id; ?>";
-		  	var cid = ".<?php echo $widget_custom_id; ?> > .arrows"
+		  	var cid = ".<?php echo $widget_custom_id; ?> .arrows"
 		    $(wid).flexslider({
 		      animation: "slide",
 		      slideshow: false,
 		      animationLoop: false,
 		      itemWidth: 300,
 		      itemMargin: 10,
+		      nextText: ">",
+		      prevText: "<",
 		      minItems: getGridSize(), // use function to pull in initial value
 		      maxItems: getGridSize(), // use function to pull in initial value
 		      controlNav: false,
