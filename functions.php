@@ -34,3 +34,5 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+require get_template_directory() . '/widgets/woo-carousel/product-carousel.php';
