@@ -1,9 +1,4 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
 	ul {
 		display: none;
 		list-style: none;
@@ -59,12 +54,15 @@
 	a {
 		display: block;
 		text-decoration: none;
+	    padding: 15px 20px;
+    	color: #fff;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		border-bottom: 5px solid $color_purple;
 	}
 }
 

@@ -14,6 +14,24 @@ function happy_gremlin_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	$wp_customize->add_setting( 'happygremlin_logo', array(
+	'default' => '',
+	'type' => 'theme_mod',
+	'capability' => 'edit_theme_options',
+	'transport' => '',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'happy_gremlin_logo', array(
+	    'label'    => __( 'Logo', 'happygremlin' ),
+	    'section'  => 'title_tagline',
+	    'settings' => 'happygremlin_logo',
+	) ) );
+
+
+
+
+
 }
 add_action( 'customize_register', 'happy_gremlin_customize_register' );
 

@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     neat = require('node-neat').includePaths;
 
@@ -19,5 +20,5 @@ gulp.task('default',function(){
 });
 
 gulp.task('watch', function() {
-  gulp.watch('sass/*', ['styles']);
+  gulp.watch('sass/**/*.*', ['styles']);
 });

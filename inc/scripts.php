@@ -6,6 +6,8 @@
 function happy_gremlin_scripts() {
 
 	global $happy_gremlin_version;
+
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic' , '', $happy_gremlin_version);
 	
 	wp_enqueue_style( 'happy-gremlin-style', get_stylesheet_uri() , '', $happy_gremlin_version);
 
