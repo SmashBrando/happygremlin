@@ -36,3 +36,6 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 require get_template_directory() . '/widgets/woo-carousel/product-carousel.php';
+require get_template_directory() . '/widgets/features/feature.php';
+require get_template_directory() . '/widgets/blog-carousel/blog-carousel.php';
+require get_template_directory() . '/widgets/brand-carousel/brand-carousel.php';

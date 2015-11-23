@@ -24,12 +24,15 @@ class HG_Feature extends WP_Widget {
 		// Set default values
 		$instance = wp_parse_args( (array) $instance, array(
 			'happygremlin_title' => '', 
-			'happygremlin_product_feed' => '',
+			'happygremlin_image' => '',
+			'happygremlin_content' => '',
 		) );
 
 		// Retrieve an existing value from the database
-		$happygremlin_product_feed = !empty( $instance['happygremlin_product_feed'] ) ? $instance['happygremlin_product_feed'] : '';
 		$happygremlin_title = !empty( $instance['happygremlin_title'] ) ? $instance['happygremlin_title'] : '';
+		$happygremlin_image = !empty( $instance['happygremlin_image'] ) ? $instance['happygremlin_image'] : '';
+		$happygremlin_content = !empty( $instance['happygremlin_content'] ) ? $instance['happygremlin_content'] : '';
+
 
 		// Form fields
 		echo '<p>';
@@ -38,12 +41,13 @@ class HG_Feature extends WP_Widget {
 		echo '</p>';
 
 		echo '<p>';
-		echo '	<label for="' . $this->get_field_id( 'happygremlin_product_feed' ) . '" class="happygremlin_product_feed_label">' . __( 'Select a product feed', 'happy-gremlin' ) . '</label>';
-		echo '	<select id="' . $this->get_field_id( 'happygremlin_product_feed' ) . '" name="' . $this->get_field_name( 'happygremlin_product_feed' ) . '" class="widefat">';
-		echo '		<option value="_featured" ' . selected( $happygremlin_product_feed, '_featured', false ) . '> ' . __( 'Featured', 'happy-gremlin' );
-		echo '		<option value="_new" ' . selected( $happygremlin_product_feed, '', false ) . '> ' . __( 'New', 'happy-gremlin' );
-		echo '		<option value="_sale" ' . selected( $happygremlin_product_feed, '_sale_price', false ) . '> ' . __( 'Sale', 'happy-gremlin' );
-		echo '	</select>';
+		echo '	<label for="' . $this->get_field_id( 'happygremlin_image' ) . '" class="happygremlin_image_label">' . __( 'Image URL', 'happy-gremlin' ) . '</label>';
+		echo '	<input type="text" id="' . $this->get_field_id( 'happygremlin_image' ) . '" name="' . $this->get_field_name( 'happygremlin_image' ) . '" class="widefat" placeholder="' . esc_attr__( '', 'happy-gremlin' ) . '" value="' . esc_attr( $happygremlin_image ) . '">';
+		echo '</p>';
+
+		echo '<p>';
+		echo '	<label for="' . $this->get_field_id( 'happygremlin_content' ) . '" class="happygremlin_content_label">' . __( 'Content', 'happy-gremlin' ) . '</label>';
+		echo '	<textarea rows="6" id="' . $this->get_field_id( 'happygremlin_content' ) . '" name="' . $this->get_field_name( 'happygremlin_content' ) . '" class="widefat" placeholder="' . esc_attr__( '', 'happy-gremlin' ) . '" value="' . esc_attr( $happygremlin_content ) . '">' . esc_attr( $happygremlin_content ) . '</textarea>';
 		echo '</p>';
 
 	}
@@ -52,8 +56,9 @@ class HG_Feature extends WP_Widget {
 
 		$instance = $old_instance;
 
-		$instance['happygremlin_product_feed'] = !empty( $new_instance['happygremlin_product_feed'] ) ? strip_tags( $new_instance['happygremlin_product_feed'] ) : '';
 		$instance['happygremlin_title'] = !empty( $new_instance['happygremlin_title'] ) ? strip_tags( $new_instance['happygremlin_title'] ) : '';
+		$instance['happygremlin_image'] = !empty( $new_instance['happygremlin_image'] ) ? strip_tags( $new_instance['happygremlin_image'] ) : '';
+		$instance['happygremlin_content'] = !empty( $new_instance['happygremlin_content'] ) ? strip_tags( $new_instance['happygremlin_content'] ) : '';
 
 		return $instance;
 
@@ -61,7 +66,7 @@ class HG_Feature extends WP_Widget {
 
 }
 
-function happygremlin_register_widgets() {
+function happygremlin_register__feature_widgets() {
 	register_widget( 'HG_Feature' );
 }
-add_action( 'widgets_init', 'happygremlin_register_widgets' );
+add_action( 'widgets_init', 'happygremlin_register__feature_widgets' );
