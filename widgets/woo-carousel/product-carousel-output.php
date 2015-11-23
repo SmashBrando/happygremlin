@@ -2,6 +2,21 @@
 
 <?php
 $widget_custom_id = 'woocar-' . $instance["panels_info"]["id"];
+
+if(! function_exists('carouselProductBefore')){
+	add_action('woocommerce_before_shop_loop_item', 'carouselProductBefore');
+	function carouselProductBefore() {
+		echo '<div class="product-carousel-item">';
+	}
+}
+
+if(! function_exists('carouselProductAfter')){
+	add_action('woocommerce_after_shop_loop_item', 'carouselProductAfter');
+	function carouselProductAfter() {
+		echo '</div>';
+	}
+}
+
 ?>
 		
 

@@ -772,38 +772,6 @@ object {
 /*--------------------------------------------------------------
 # Custom Widget -> Move to their own plugins later
 --------------------------------------------------------------*/
-.carousel-header {
-  position: relative;
-  display: table;
-  width: 100%;
-  border-bottom: 1px solid black;
-  margin-bottom: 30px;
-  margin-top: 30px; }
-  .carousel-header h1 {
-    display: inline-block;
-    float: left;
-    margin: 0; }
-  .carousel-header ul {
-    float: right;
-    margin-top: 10px; }
-  .carousel-header li {
-    display: inline-block;
-    margin-right: 10px; }
-    .carousel-header li a {
-      color: #fff;
-      text-decoration: none;
-      position: relative;
-      display: inline-block;
-      height: 30px;
-      width: 30px;
-      padding: 2px 10px;
-      border-radius: 3px;
-      background: green; }
-      .carousel-header li a:focus {
-        outline: none; }
-  .carousel-header .flex-nav-next {
-    margin-right: 0; }
-
 /* ====================================================================================================================
  * FONT-FACE
  * ====================================================================================================================*/
@@ -868,3 +836,47 @@ html[xmlns] .flexslider .slides {
 
 .flexslider li {
   margin-right: 10px; }
+
+/* ====================================================================================================================
+ * CUSTOM STYLES
+ * ====================================================================================================================*/
+.carousel-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+  margin-top: 30px; }
+  .carousel-header h1 {
+    display: inline-block;
+    float: left;
+    margin: 0; }
+  .carousel-header ul {
+    float: right;
+    margin-top: 10px; }
+  .carousel-header li {
+    display: inline-block;
+    margin-right: 10px; }
+    .carousel-header li a {
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      padding: 2px 10px;
+      border-radius: 3px;
+      background: #7E52D2;
+      box-shadow: 0px 2px 0px 0px #3c1753; }
+      .carousel-header li a:focus {
+        outline: none; }
+  .carousel-header .flex-nav-next {
+    margin-right: 0; }
+
+.product-carousel-item {
+  padding: 8px;
+  border: 1px solid grey; }
+
+/*--------------------------------------------------------------
+# Custom Widget -> Move to their own plugins later
+--------------------------------------------------------------*/
