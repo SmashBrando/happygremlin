@@ -13,8 +13,8 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<div class="row">
+	<div id="primary" class="content-area col-9">
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -33,6 +33,8 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+	<div class="col-3 last">
+		<?php get_sidebar(); ?>
+	</div>
+</div>
+<?php get_footer();

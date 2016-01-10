@@ -11,6 +11,7 @@
     var sass = require('gulp-sass');
     var autoprefixer = require('gulp-autoprefixer');
     var cssnano = require('gulp-cssnano');
+    var neat = require('node-neat').includePaths;
 
 /*
  * css paths
@@ -27,8 +28,11 @@
             autoprefixer,
             cssnano
         ];
-        return gulp.src(paths.scss)
-            .pipe(sass().on('error', sass.logError))
+        return gulp.src([
+            './sass/*.scss',
+            './bower_components/owl.carousel/dist/owl.carousel.min.css'
+            ])
+            .pipe(sass({includePaths: ['css'].concat(neat)}).on('error', sass.logError))
             .pipe(autoprefixer())
             .pipe(cssnano())
             .pipe(gulp.dest(''));
@@ -48,10 +52,11 @@
  */
     gulp.task('concat-scripts', function() {
         return gulp.src([
-            './js/!(theme)*.js',
-            './js/theme.js'
+            './bower_components/owl.carousel/dist/owl.carousel.min.js',
+            './js/src/!(theme)*.js',
+            './js/src/theme.js'
         ])
         .pipe(concat('./js/scripts.min.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(''));
     });

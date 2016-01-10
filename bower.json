@@ -1,0 +1,22 @@
+{
+  "name": "HappyGremlin",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Brandon Kidd <brandon.j.kidd@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/SmashBrando/happygremlin",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "OwlCarousel2#~2.0.0-beta.3"
+  }
+}

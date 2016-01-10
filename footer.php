@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+		<div class="site-info container">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'happygremlin' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'happygremlin' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'happygremlin' ), 'happygremlin', '<a href="http://folsomcreative.com" rel="designer">Folsom Creative</a>' ); ?>
