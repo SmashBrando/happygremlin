@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package CTI
+ * @package HappyGremlin
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses cti_header_style()
+ * @uses happygremlin_header_style()
  */
-function cti_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'cti_custom_header_args', array(
+function happygremlin_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'happygremlin_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'cti_header_style',
+		'wp-head-callback'       => 'happygremlin_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'cti_custom_header_setup' );
+add_action( 'after_setup_theme', 'happygremlin_custom_header_setup' );
 
-if ( ! function_exists( 'cti_header_style' ) ) :
+if ( ! function_exists( 'happygremlin_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see cti_custom_header_setup().
+ * @see happygremlin_custom_header_setup().
  */
-function cti_header_style() {
+function happygremlin_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

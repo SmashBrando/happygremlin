@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package CTI
+ * @package HappyGremlin
  */
 
 get_header(); ?>
