@@ -1,53 +1,17 @@
 /*!
-Theme Name: Happy Gremlin 1.0
-Theme URI: http://underscores.me/
-Author: The Happy Gremlin Company
-Author URI: http://happygremlin.com
-Description: Version 1.0 of The Happy Gremlin Company theme created in house for WordPress/WooCommerce
+Theme Name: CTI
+Theme URI: http://folsomcreative.com/
+Author: Folsom Creative
+Author URI: http://folsomcreative.com
+Description: A custom theme for CTI Pack
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: happy-gremlin
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Happy Gremlin 1.0 is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+Text Domain: cti
 */
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-    ## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+# Framework
 --------------------------------------------------------------*/
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -227,52 +191,6 @@ td,
 th {
   padding: 0; }
 
-ul, li {
-  margin: 0;
-  padding: 0; }
-
-/*--------------------------------------------------------------
-# Grid
---------------------------------------------------------------*/
-.site-content, .container {
-  content: "";
-  display: table;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%; }
-
-.content-area, #container {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .content-area:last-child, #container:last-child {
-    margin-right: 0; }
-
-.widget-area, #secondary {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  margin-right: 0; }
-  .widget-area:last-child, #secondary:last-child {
-    margin-right: 0; }
-
-.page-template-template-home-php .content-area {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .page-template-template-home-php .content-area:last-child {
-    margin-right: 0; }
-
-/*--------------------------------------------------------------
-# Helpers
---------------------------------------------------------------*/
-.right {
-  float: right; }
-
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -286,13 +204,6 @@ textarea {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
-
-h1, h2, h3, h4, h5, h6 {
-  clear: both; }
-
-body {
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased; }
 
 p {
   margin-bottom: 1.5em; }
@@ -333,6 +244,9 @@ mark, ins {
 big {
   font-size: 125%; }
 
+h1, h2, h3, h4, h5, h6 {
+  clear: both; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -349,16 +263,11 @@ body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
 
-blockquote, q {
-  quotes: "" ""; }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: ""; }
-
-hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em; }
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
 
 ul, ol {
   margin: 0 0 1.5em 3em; }
@@ -380,19 +289,82 @@ dt {
 dd {
   margin: 0 1.5em 1.5em; }
 
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
+a {
+  color: royalblue; }
+  a:visited {
+    color: purple; }
+  a:hover, a:focus, a:active {
+    color: midnightblue; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
 
 table {
   margin: 0 0 1.5em;
   width: 100%; }
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="range"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="time"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="color"]:focus,
+  textarea:focus {
+    color: #111; }
+
+select {
+  border: 1px solid #ccc; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+  padding: 3px; }
+
+textarea {
+  padding-left: 3px;
+  width: 100%; }
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -424,93 +396,60 @@ input[type="submit"] {
     border-color: #aaa #bbb #bbb;
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  textarea:focus {
-    color: #111; }
+blockquote, q {
+  quotes: "" ""; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: ""; }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-  padding: 3px; }
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em; }
 
-textarea {
-  padding-left: 3px;
-  width: 100%; }
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
-  .main-navigation ul ul {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    float: left;
-    position: absolute;
-    top: 1.5em;
-    left: -999em;
-    z-index: 99999; }
-    .main-navigation ul ul ul {
-      left: -999em;
-      top: 0; }
-    .main-navigation ul ul li:hover > ul,
-    .main-navigation ul ul li.focus > ul {
-      left: 100%; }
-    .main-navigation ul ul a {
-      width: 200px; }
-  .main-navigation ul li:hover > ul,
-  .main-navigation ul li.focus > ul {
-    left: auto; }
-
-.main-navigation li {
-  float: left;
-  position: relative; }
-
-.main-navigation a {
+.main-navigation {
+  clear: both;
   display: block;
-  text-decoration: none;
-  padding: 15px 20px;
-  color: #fff; }
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
-  border-bottom: 5px solid #7E52D2; }
+  float: left;
+  width: 100%; }
+  .main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    .main-navigation ul ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5em;
+      left: -999em;
+      z-index: 99999; }
+      .main-navigation ul ul ul {
+        left: -999em;
+        top: 0; }
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
+        left: 100%; }
+      .main-navigation ul ul a {
+        width: 200px; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
+  .main-navigation li {
+    float: left;
+    position: relative; }
+  .main-navigation a {
+    display: block;
+    text-decoration: none; }
 
 /* Small menu. */
 .menu-toggle,
@@ -542,9 +481,6 @@ a {
   text-align: right;
   width: 50%; }
 
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -572,8 +508,87 @@ a {
     z-index: 100000;
     /* Above WP toolbar. */ }
 
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0; }
+
 /*--------------------------------------------------------------
-# Alignments
+# Structure
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed; }
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both; }
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none; }
+
+.comment-content a {
+  word-wrap: break-word; }
+
+.bypostauthor {
+  display: block; }
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+.sticky {
+  display: block; }
+
+.hentry {
+  margin: 0 0 1.5em; }
+
+.byline,
+.updated:not(.published) {
+  display: none; }
+
+.single .byline,
+.group-blog .byline {
+  display: inline; }
+
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */ }
+  .widget select {
+    max-width: 100%; }
+
+/*--------------------------------------------------------------
+# Templates
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# WooCommerce
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Wordpress
 --------------------------------------------------------------*/
 .alignleft {
   display: inline;
@@ -591,140 +606,6 @@ a {
   margin-left: auto;
   margin-right: auto; }
 
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-  content: "";
-  display: table; }
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-  clear: both; }
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */ }
-  .widget select {
-    max-width: 100%; }
-
-/* Search widget. */
-.widget_search .search-submit {
-  display: none; }
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-.utility-nav {
-  background-color: #fafafa;
-  padding: 12px 0;
-  font-size: 11px;
-  font-weight: 500; }
-  .utility-nav a {
-    color: #3c1753; }
-
-.main-nav {
-  background-color: #24292d; }
-
-.site-branding {
-  padding: 15px 0; }
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.sticky {
-  display: block; }
-
-.hentry {
-  margin: 0 0 1.5em; }
-
-.byline,
-.updated:not(.published) {
-  display: none; }
-
-.single .byline,
-.group-blog .byline {
-  display: inline; }
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0; }
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em; }
-
-/*--------------------------------------------------------------
-## Asides
---------------------------------------------------------------*/
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-  display: none; }
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word; }
-
-.bypostauthor {
-  display: block; }
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none; }
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-  display: block; }
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0; }
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%; }
-
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%; }
@@ -738,9 +619,6 @@ object {
 .wp-caption-text {
   text-align: center; }
 
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
 .gallery {
   margin-bottom: 1.5em; }
 
@@ -769,157 +647,10 @@ object {
 .gallery-caption {
   display: block; }
 
-/*--------------------------------------------------------------
-# Custom Widget -> Move to their own plugins later
---------------------------------------------------------------*/
-/* ====================================================================================================================
- * FONT-FACE
- * ====================================================================================================================*/
-@font-face {
-  font-family: 'flexslider-icon';
-  src: url("fonts/flexslider-icon.eot");
-  src: url("fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), url("fonts/flexslider-icon.woff") format("woff"), url("fonts/flexslider-icon.ttf") format("truetype"), url("fonts/flexslider-icon.svg#flexslider-icon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-/* ====================================================================================================================
- * RESETS
- * ====================================================================================================================*/
-.flex-container a:hover,
-.flex-slider a:hover,
-.flex-container a:focus,
-.flex-slider a:focus {
-  outline: none; }
-
-.slides,
-.slides > li,
-.flex-control-nav,
-.flex-direction-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.flex-pauseplay span {
-  text-transform: capitalize; }
-
-/* ====================================================================================================================
- * BASE STYLES
- * ====================================================================================================================*/
-.flexslider {
-  margin: 0;
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
   padding: 0; }
-
-.flexslider .slides > li {
-  display: none;
-  -webkit-backface-visibility: hidden; }
-
-.flexslider .slides img {
-  width: 100%;
-  display: block; }
-
-.flexslider .slides:after {
-  content: "\0020";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0; }
-
-html[xmlns] .flexslider .slides {
-  display: block; }
-
-* html .flexslider .slides {
-  height: 1%; }
-
-.no-js .flexslider .slides > li:first-child {
-  display: block; }
-
-.flexslider li {
-  margin-right: 10px; }
-
-/* ====================================================================================================================
- * CUSTOM STYLES
- * ====================================================================================================================*/
-.carousel-header {
-  position: relative;
-  display: table;
-  width: 100%;
-  border-bottom: 1px solid black;
-  margin-bottom: 30px;
-  margin-top: 30px; }
-  .carousel-header h1 {
-    display: inline-block;
-    float: left;
-    margin: 0; }
-  .carousel-header ul {
-    float: right;
-    margin-top: 10px; }
-  .carousel-header li {
-    display: inline-block;
-    margin-right: 10px; }
-    .carousel-header li a {
-      color: #fff;
-      text-decoration: none;
-      position: relative;
-      display: inline-block;
-      height: 30px;
-      width: 30px;
-      padding: 2px 10px;
-      border-radius: 3px;
-      background: #7E52D2;
-      box-shadow: 0px 2px 0px 0px #3c1753; }
-      .carousel-header li a:focus {
-        outline: none; }
-  .carousel-header .flex-nav-next {
-    margin-right: 0; }
-
-.product-carousel-item {
-  padding: 8px;
-  border: 1px solid grey; }
-
-/*--------------------------------------------------------------
-# Custom Widget -> Move to their own plugins later
---------------------------------------------------------------*/
-/*----- Accordion -----*/
-.accordion, .accordion * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.accordion {
-  overflow: hidden;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  background: #f7f7f7; }
-
-/*----- Section Titles -----*/
-.accordion-section-title {
-  width: 100%;
-  padding: 15px;
-  display: inline-block;
-  border-bottom: 1px solid #1a1a1a;
-  background: #333;
-  transition: all linear 0.15s;
-  /* Type */
-  font-size: 1.200em;
-  text-shadow: 0px 1px 0px #1a1a1a;
-  color: #fff; }
-
-.accordion-section-title.active, .accordion-section-title:hover {
-  background: #4c4c4c;
-  /* Type */
-  text-decoration: none; }
-
-.accordion-section:last-child .accordion-section-title {
-  border-bottom: none; }
-
-/*----- Section Content -----*/
-.accordion-section-content {
-  padding: 15px;
-  display: none; }
-
-.widget .brand-thumbnails li, .brand-thumbnails li {
-  padding: 0;
-  margin: 0;
-  float: none;
-  display: none; }

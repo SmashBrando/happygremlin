@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Happy_Gremlin_1.0
+ * @package CTI
  */
 
 ?>
@@ -15,10 +15,11 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
 		<?php
+			the_content();
+
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'happy-gremlin' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cti' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -29,7 +30,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'happy-gremlin' ),
+					esc_html__( 'Edit %s', 'cti' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',
@@ -38,4 +39,3 @@
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-

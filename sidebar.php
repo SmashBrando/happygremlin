@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Happy_Gremlin_1.0
+ * @package CTI
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<div id="secondary" class="widget-area" role="complementary">
+<aside id="secondary" class="widget-area" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</div><!-- #secondary -->
+</aside><!-- #secondary -->

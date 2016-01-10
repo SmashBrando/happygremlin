@@ -1,193 +1,81 @@
 /*!
-Theme Name: Happy Gremlin 1.0
-Theme URI: http://underscores.me/
-Author: The Happy Gremlin Company
-Author URI: http://happygremlin.com
-Description: Version 1.0 of The Happy Gremlin Company theme created in house for WordPress/WooCommerce
+Theme Name: CTI
+Theme URI: http://folsomcreative.com/
+Author: Folsom Creative
+Author URI: http://folsomcreative.com
+Description: A custom theme for CTI Pack
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: happy-gremlin
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Happy Gremlin 1.0 is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+Text Domain: cti
 */
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-    ## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+# Framework
 --------------------------------------------------------------*/
-@import "bourbon";
-@import "neat";
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
+@import "variables/variables";
+@import "mixins/mixins";
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
 
-ul, li {
-	margin: 0;
-	padding: 0;
-}
-
-/*--------------------------------------------------------------
-# Grid
---------------------------------------------------------------*/
-@import "layout/grid";
-
-/*--------------------------------------------------------------
-# Helpers
---------------------------------------------------------------*/
-@import "layout/helpers";
-
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import "typography/copy";
+@import "typography/headings";
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-@import "elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms/forms";
+@import "elements/html";
+@import "elements/body";
+@import "elements/img";
+@import "elements/lists";
+@import "elements/links";
+@import "elements/tables";
+@import "elements/fields";
+@import "elements/buttons";
+@import "elements/special";
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+@import "navigation/menus";
+@import "navigation/accessibility";
 
 /*--------------------------------------------------------------
-# Accessibility
+# Structure
 --------------------------------------------------------------*/
-@import "modules/accessibility";
+@import "structure/global/clearings";
+@import "structure/global/grid";
+@import "structure/primary/asides";
+@import "structure/primary/comments";
+@import "structure/primary/posts";
+@import "structure/primary/pages";
+@import "structure/secondary/widgets";
 
 /*--------------------------------------------------------------
-# Alignments
+# Templates
 --------------------------------------------------------------*/
-@import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
+//@import "templates/";
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-@import "site/secondary/widgets";
+//@import "widgets/";
 
 /*--------------------------------------------------------------
-# Content
+# WooCommerce
 --------------------------------------------------------------*/
-@import "components/header";
+//@import "woocommerce/";
 
 /*--------------------------------------------------------------
-# Content
+# Wordpress
 --------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
-
-
-/*--------------------------------------------------------------
-# Custom Widget -> Move to their own plugins later
---------------------------------------------------------------*/
-@import "widgets/widgets";
-
-/*--------------------------------------------------------------
-# Custom Widget -> Move to their own plugins later
---------------------------------------------------------------*/
-@import "woocommerce/product";
-
-
-/*----- Accordion -----*/
-.accordion, .accordion * {
-    -webkit-box-sizing:border-box; 
-    -moz-box-sizing:border-box; 
-    box-sizing:border-box;
-}
- 
-.accordion {
-    overflow:hidden;
-    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
-    border-radius:3px;
-    background:#f7f7f7;
-}
- 
-/*----- Section Titles -----*/
-.accordion-section-title {
-    width:100%;
-    padding:15px;
-    display:inline-block;
-    border-bottom:1px solid #1a1a1a;
-    background:#333;
-    transition:all linear 0.15s;
-    /* Type */
-    font-size:1.200em;
-    text-shadow:0px 1px 0px #1a1a1a;
-    color:#fff;
-}
- 
-.accordion-section-title.active, .accordion-section-title:hover {
-    background:#4c4c4c;
-    /* Type */
-    text-decoration:none;
-}
- 
-.accordion-section:last-child .accordion-section-title {
-    border-bottom:none;
-}
- 
-/*----- Section Content -----*/
-.accordion-section-content {
-    padding:15px;
-    display:none;
-}
-
-
-.widget .brand-thumbnails li, .brand-thumbnails li {
-    padding: 0;
-    margin: 0;
-    float: none;
-    display: none;
-}
+@import "wordpress/alignments";
+@import "wordpress/captions";
+@import "wordpress/galleries";
+@import "wordpress/smiley";
