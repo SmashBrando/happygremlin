@@ -1,0 +1,29 @@
+.features {
+	.section-title {
+		@include section-header(); //acf-mixin
+	}
+	.feature {
+		@include row();
+		display: table;
+		@media screen and (min-width: 768px){
+			@include span-columns(4);
+			@include omega(4n);
+		}
+		.icon {
+			@include span-columns(3);
+			display: inline-block;
+			padding-right: 10px;
+			float: left;
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		.right {
+			@include span-columns(9);
+			margin-right: 0;
+			display: inline-block;
+			float: right;
+		}
+	}
+}

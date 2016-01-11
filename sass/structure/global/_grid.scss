@@ -2,8 +2,14 @@ $gutter: 30px;
 $grid-columns: 12 !default;
 
 .container {
-	width: 1170px;
-	@include outer-container(100%);
+	width: 100%;
+	@include outer-container(1200px);
+	padding-left: 15px;
+	padding-right: 15px;
+	section {
+	    overflow: overlay;
+    	margin-bottom: 15px;
+	}
 }
 .row {
    @include row();
@@ -47,4 +53,11 @@ $grid-columns: 12 !default;
 }
 .last {
 	@include omega;
+}
+
+@media screen and (max-width: 767px) {
+	.mobile-full {
+		@include span-columns(12);
+		@include omega;
+	}
 }

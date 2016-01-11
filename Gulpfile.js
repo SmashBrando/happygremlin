@@ -28,10 +28,7 @@
             autoprefixer,
             cssnano
         ];
-        return gulp.src([
-            './sass/*.scss',
-            './bower_components/owl.carousel/dist/owl.carousel.min.css'
-            ])
+        return gulp.src(paths.scss)
             .pipe(sass({includePaths: ['css'].concat(neat)}).on('error', sass.logError))
             .pipe(autoprefixer())
             .pipe(cssnano())
@@ -52,11 +49,11 @@
  */
     gulp.task('concat-scripts', function() {
         return gulp.src([
-            './bower_components/owl.carousel/dist/owl.carousel.min.js',
+            //'./bower_components/owl.carousel/dist/owl.carousel.js',
             './js/src/!(theme)*.js',
             './js/src/theme.js'
         ])
         .pipe(concat('./js/scripts.min.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(''));
     });

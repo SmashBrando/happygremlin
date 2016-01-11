@@ -1,0 +1,44 @@
+@mixin section-header() {
+	display: table;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $charcoal;
+}
+
+@mixin carousel-controls() {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+	margin-top: 20px;
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+
+	[class*='owl-'] {
+		color: $white;
+		@include font-size(0.800);
+		margin: 0;
+		padding: 10px;
+		background: $purple;
+		display: inline-block;
+		cursor: pointer;
+		border-radius: 3px;
+		border-bottom: 3px solid $darkpurple;
+
+		&:hover {
+			background: lighten($purple, 5%);
+			border-color: lighten($darkpurple, 5%);		}
+	}
+	.owl-prev {
+		margin-right: 5px;
+	}
+	.disabled {
+		opacity: 0.5;
+		cursor: default;
+	}
+
+}
+
+@mixin carousel-container() {
+	border: solid 1px $grey;
+	padding: 8px !important;
+}

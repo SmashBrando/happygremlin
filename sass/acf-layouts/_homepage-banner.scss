@@ -1,0 +1,41 @@
+.homepage-banner {
+		padding: 55px;
+		color: $white;
+		text-align: center;
+		display: table;
+		width: 100%;
+    	background-size: cover;
+    	margin-bottom: 15px;
+	.col-6{
+		@media screen and (max-width: 767px){
+			@include span-columns(12);
+		}
+	}
+	.title-alpha {
+		@include font-size(1.25);
+	}
+	.title-beta {
+		@include font-size(2.5);
+	}
+	.introduction {
+		@include font-size(1);
+	}
+	.button {
+		display: table;
+		margin: 0 auto;
+		padding: 15px 25px;
+		color: $white;
+		background: $yellow;
+		text-decoration: none;
+		border-radius: 5px;
+		border-bottom: 3px solid darken($yellow, 20%);
+		&:hover {
+			background: darken($yellow, 10%);
+			border-color: darken($yellow, 30%);
+		}
+	}
+	.graphic-overlay {
+		display: block;
+		margin: 0 auto;
+	}
+}

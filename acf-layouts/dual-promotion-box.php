@@ -16,12 +16,12 @@ $promotion_beta_link = get_sub_field('promotion_beta_link'); //url
 ?>
 
 <section class="dual-promotion-box">
-	<div class="col-6">
+	<div class="col-6 mobile-full">
 		<a href="<?php echo $promotion_alpha_link; ?>">
 			<img src="<?php echo $promotion_alpha_image['url']; ?>" alt="<?php echo $promotion_alpha_image['alt']; ?>" title="<?php echo $promotion_alpha_image['title']; ?>">
 		</a>
 	</div>
-	<div class="col-6">
+	<div class="col-6 mobile-full">
 		<a href="<?php echo $promotion_beta_link; ?>">
 			<img src="<?php echo $promotion_beta_image['url']; ?>" alt="<?php echo $promotion_beta_image['alt']; ?>" title="<?php echo $promotion_beta_image['title']; ?>">
 		</a>

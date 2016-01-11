@@ -29,8 +29,10 @@ $feature = get_sub_field('feature'); //repeater
 			?>
 			<div class="feature">
 				<div class="icon"><img src="<?php echo $feature_icon['url']; ?>" alt="<?php echo $feature_icon['alt']; ?>" title="<?php echo $feature_icon['title']; ?>"></div>
-				<div class="title"><?php echo $featured_title; ?></div>
-				<div class="content"><?php echo $feature_content; ?></div>
+				<div class="right">
+					<div class="title"><?php echo $featured_title; ?></div>
+					<div class="content"><?php echo $feature_content; ?></div>
+				</div>
 			</div>
 		<?php endwhile; ?>
 	<?php endif; ?>

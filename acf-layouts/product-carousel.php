@@ -15,14 +15,17 @@ $product_type = get_sub_field('product_type'); //select
 ?>
 
 <section class="product-carousel">
-	 <h2 class="section-title"><?php echo $title ?></h2>
-	 <div class="product-carousel-items">
-	 	<?php if($product_type == 'featured'): ?>
-	 		<?php echo do_shortcode( '[recent_products per_page=8 columns=12]' ) ?>
-	 	<?php elseif($product_type == 'new'): ?>
-	 		<?php echo do_shortcode( '[featured_products per_page=8 columns=12]' ) ?>
-		<?php elseif($product_type == 'sale'): ?>
-			<?php echo do_shortcode( '[sale_products per_page=8 columns=12]' ) ?>
-		<?php endif; ?>
-	 </div>
+	<div class="carousel-header">
+		<h2 class="section-title"><?php echo $title ?></h2>
+		<div class="arrows"></div>
+	</div>
+	<div class="product-carousel-items">
+	<?php if($product_type == 'featured'): ?>
+		<?php echo do_shortcode( '[recent_products per_page=8 columns=12]' ) ?>
+	<?php elseif($product_type == 'new'): ?>
+		<?php echo do_shortcode( '[featured_products per_page=8 columns=12]' ) ?>
+	<?php elseif($product_type == 'sale'): ?>
+	<?php echo do_shortcode( '[sale_products per_page=8 columns=12]' ) ?>
+	<?php endif; ?>
+	</div>
 </section>

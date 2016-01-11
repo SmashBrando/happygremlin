@@ -1,5 +1,7 @@
+.navbar {
+	background-color: $charcoal;
+}
 .main-navigation {
-
 	ul {
 		display: none;
 		list-style: none;
@@ -45,6 +47,7 @@
 		}
 	}
 	li {
+		padding: 15px 25px;
 		float: left;
 		position: relative;
 
@@ -55,6 +58,10 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: $white;
+		&:hover{
+			color: $lightpurple;
+		}
 	}
 
 	.current_page_item > a,

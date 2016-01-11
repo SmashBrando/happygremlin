@@ -16,6 +16,7 @@ $graphic_companion = get_sub_field('graphic_companion'); //image
 	<h2 class="section-title"><?php echo $title ?></h2>
 	<?php if( have_rows('accordion_item') ): ?>
 		<div class="accordion">
+		<?php $accordion_count = 0; ?>
 		<?php while ( have_rows('accordion_item') ) : the_row(); ?>
 			<?php
 
@@ -28,11 +29,17 @@ $graphic_companion = get_sub_field('graphic_companion'); //image
 			$content = get_sub_field('content'); //textarea
 
 			?>
-			<div class="accordion-item">
-				<div class="title"><?php echo $title; ?></div>
-				<div class="content"><?php echo $content; ?></div>
-			</div>
+		    <div class="accordion-section">
+		        <a class="accordion-section-title <?php if($accordion_count == '0'): echo 'active'; endif; ?>" href="#accordion-<?php echo $accordion_count; ?>"><?php echo $title; ?></a>
+		        <div id="accordion-<?php echo $accordion_count; ?>" class="accordion-section-content <?php if($accordion_count == '0'): echo 'open'; endif; ?>" style="<?php if($accordion_count == '0'): echo 'display:block;'; endif; ?>">
+		            <?php echo $content; ?>
+		        </div><!--end .accordion-section-content-->
+		    </div><!--end .accordion-section-->
+		<?php $accordion_count++; ?>
 		<?php endwhile; ?>
 		</div>
 	<?php endif; ?>
+	<div class="companion">
+		<img src="<?php echo $graphic_companion['url']; ?>" alt="<?php echo $graphic_companion['alt']; ?>" title="<?php echo $graphic_companion['title']; ?>">
+	</div>
 </section>

@@ -1,0 +1,17 @@
+.blog-carousel {
+	.carousel-header {
+		@include section-header(); //acf-mixin
+		.section-title {
+			display: inline-block;
+			float: left;
+		}
+		.arrows {
+			display: inline-block;
+			float: right;
+			@include carousel-controls();
+		}
+	}
+	article {
+		@include carousel-container();
+	}
+}

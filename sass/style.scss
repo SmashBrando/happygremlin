@@ -24,7 +24,6 @@ Text Domain: happygremlin
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
-
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -55,6 +54,8 @@ Text Domain: happygremlin
 --------------------------------------------------------------*/
 @import "structure/global/clearings";
 @import "structure/global/grid";
+@import "structure/header/toolbar";
+@import "structure/header/site-branding";
 @import "structure/primary/asides";
 @import "structure/primary/comments";
 @import "structure/primary/posts";
@@ -74,7 +75,17 @@ Text Domain: happygremlin
 /*--------------------------------------------------------------
 # WooCommerce
 --------------------------------------------------------------*/
-//@import "woocommerce/";
+//@import "woocommerce/products";
+
+/*--------------------------------------------------------------
+# ACF Layouts
+--------------------------------------------------------------*/
+@import "acf-layouts/acf-mixins";
+@import "acf-layouts/homepage-banner";
+@import "acf-layouts/features";
+@import "acf-layouts/accordion-features";
+@import "acf-layouts/product-carousel";
+@import "acf-layouts/blog-carousel";
 
 /*--------------------------------------------------------------
 # Wordpress

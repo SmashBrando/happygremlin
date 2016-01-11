@@ -115,7 +115,9 @@ add_action( 'widgets_init', 'happygremlin_widgets_init' );
  */
 function happygremlin_scripts() {
 	wp_enqueue_style( 'happygremlin-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'owlcarousel-style', get_template_directory_uri() . '/lib/owlcarousel//assets/owl.carousel.css' );
 
+	wp_enqueue_script( 'owlcarousel-scritps', get_template_directory_uri() . '/lib/owlcarousel/owl.carousel.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'happygremlin-scritps', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

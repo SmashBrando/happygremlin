@@ -1,0 +1,14 @@
+.toolbar {
+	background-color: $grey;
+	padding: 10px 0;
+	color: $pewter;
+	@include font-size(0.800);
+	.support {
+		display: inline-block;
+		float: left;
+	}
+	.account {
+		display: inline-block;
+		float: right;
+	}
+}
